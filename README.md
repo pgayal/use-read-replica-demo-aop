@@ -1,4 +1,4 @@
-# use-read-replica-demo-aop
+# Use Read Replica Demo for Select Queries using AOP
 This project shows show how to use read-replica to run select queries using Spring Context and AOP
 
 Run the [database-initialize-script.sql](/src/main/resources/database-initialize-script.sql) file to create test databases on local mysql

@@ -44,7 +44,7 @@ To make any method query the read-replica, you just have to use the `@ReadOnlyQu
 ### Implementation Steps to Move Heavy Load Select Queries to Read-Replica
 
 1. While writing new methods or updating existing ones,
-    - Annotate the  `@ReadOnlyRepository` - VERY IMPORTANT
+    - Annotate the  `@ReadOnlyQuery` - VERY IMPORTANT
 2. DONE
 
 <br/>

@@ -35,7 +35,7 @@ connects to the read-replica. Separate set of connection parameters are defined 
 This application uses the [RoutingDataSource.java](/src/main/java/com/example/usereadreplicademoaop/config/RoutingDataSource.java) which extends spring's [AbstractRoutingDataSource.java](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.html)
 class to route the queries to a specific datasource based on the context. The context for each method call is set by AOP [ReadOnlyRouteInterceptor.java](/src/main/java/com/example/usereadreplicademoaop/aop/ReadOnlyRouteInterceptor.java)
 
-To make any method query the read-replica, you just have to use the `@ReadOnlyQuery` annotation on the service method which want to query on the read-replica.
+To make any method query the read-replica, you just have to use the `@ReadReplicaQuery` annotation on the service method which want to query on the read-replica.
 
 **NO OTHER CHANGE IS NEEDED ON THE DAILY TASK OF WRITING NEW METHODS**
 
@@ -44,7 +44,7 @@ To make any method query the read-replica, you just have to use the `@ReadOnlyQu
 ### Implementation Steps to Move Heavy Load Select Queries to Read-Replica
 
 1. While writing new methods or updating existing ones,
-    - Annotate the  `@ReadOnlyQuery` - VERY IMPORTANT
+    - Annotate the  `@ReadReplicaQuery` - VERY IMPORTANT
 2. DONE
 
 <br/>

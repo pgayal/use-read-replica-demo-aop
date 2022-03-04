@@ -1,6 +1,6 @@
 package com.example.usereadreplicademoaop.service;
 
-import com.example.usereadreplicademoaop.annotation.ReadOnlyQuery;
+import com.example.usereadreplicademoaop.annotation.ReadReplicaQuery;
 import com.example.usereadreplicademoaop.dto.EngagementDTO;
 import com.example.usereadreplicademoaop.mapper.EngagementMapper;
 import com.example.usereadreplicademoaop.model.Engagement;
@@ -32,9 +32,9 @@ public class EngagementService {
     }
 
     /**
-     * This method has @ReadOnlyQuery annotation so ALL the queries done in this method will be executed on read-replica
+     * This method has @ReadReplicaQuery annotation so ALL the queries done in this method will be executed on read-replica
      */
-    @ReadOnlyQuery
+    @ReadReplicaQuery
     public List<EngagementDTO> getEngagements() {
         List<Engagement> engagements = engagementRepository.findAll();
         return engagementMapper.entityListToDTOList(engagements);

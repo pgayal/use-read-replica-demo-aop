@@ -52,6 +52,9 @@ To make any method query the read-replica, you just have to use the `@ReadReplic
 ### Classes to Refer
 1. [application.properties](/src/main/resources/application.properties)
 2. [PrimaryDataSourceConfiguration.java](/src/main/java/com/example/usereadreplicademoaop/config/PrimaryDataSourceConfiguration.java)
-5. [EngagementService.java](/src/main/java/com/example/usereadreplicademoaop/service/EngagementService.java) - refer `List<EngagementDTO> getEngagements(){ ... }` method
+3. [RoutingDataSource.java](/src/main/java/com/example/usereadreplicademoaop/config/RoutingDataSource.java)
+4. [ReadOnlyRouteInterceptor.java](/src/main/java/com/example/usereadreplicademoaop/aop/ReadOnlyRouteInterceptor.java)
+5. [ReadReplicaQuery.java](/src/main/java/com/example/usereadreplicademoaop/annotation/ReadReplicaQuery.java)
+6. [EngagementService.java](/src/main/java/com/example/usereadreplicademoaop/service/EngagementService.java) - refer `List<EngagementDTO> getEngagements(){ ... }` method
 
 
